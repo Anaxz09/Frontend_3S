@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<div class="h1">
+    <h1>Operações Aritméticas</h1>
+</div>
+<!--   -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-error px-3">
+                {% for category, message in messages %}
+                    <div class="alert {{ category }} alert-dismissible fade show px-5" role="alert">
+                      <strong>{{ message }}</strong>.
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+<div class="calculos">
+
+    <div class="card_operacao">
+        <h2>Adição</h2>
+        <form class="form-somar" action="{{ url_for('somar') }}" method="post">
+            <label>
+                <input placeholder="Digite um número" name="form-n1" class="form-control w-100">
+            </label>
+
+            <p class="bi bi-plus-lg"></p>
+
+            <label>
+                <input placeholder="Digite um número" name="form-n2" class="form-control w-100">
+            </label>
+
+            <p class="resultado">
+                {% if soma is defined %}
+                    {{ n1 }} <i class="bi bi-plus-lg"></i> {{ n2 }} = {{ soma }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Somar</button>
+        </form>
+
+    </div>
+
+    <div class="card_operacao2">
+        <h2>Subtrair</h2>
+        <form class="form-subtracao" action="{{ url_for('subtracao') }}"  method="post">
+            <label>
+                <input placeholder="Digite um número" name="form-n3" class="form-control w-100">
+            </label>
+
+            <p class="bi bi-dash-lg"></p>
+
+            <label>
+                <input placeholder="Digite um número" name="form-n4" class="form-control w-100">
+            </label>
+
+            <p class="resultado">
+                {% if subtracao is defined %}
+                    {{ n3 }} <i class="bi bi-dash-lg"></i> {{ n4 }} = {{ subtracao }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Subtração</button>
+        </form>
+
+    </div>
+    <div class="card_operacao3">
+        <h2>Multiplicação</h2>
+        <form class="form-multiplicar" action="{{ url_for('multiplicar') }}"  method="post">
+            <label>
+                <input placeholder="Digite um número" name="form-n5" class="form-control w-100">
+            </label>
+
+            <p class="bi bi-x-lg"></p>
+
+            <label>
+                <input placeholder="Digite um número" name="form-n6" class="form-control w-100">
+            </label>
+
+            <p class="resultado">
+                {% if multiplicar is defined %}
+                    {{ n5 }} <i class="bi bi-dot"></i> {{ n6 }} = {{ multiplicar }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Multiplicar</button>
+        </form>
+
+    </div>
+    <div class="card_operacao4">
+        <h2>Divisão</h2>
+        <form class="form-dividir" action="{{ url_for('dividir') }}"  method="post">
+            <label>
+                <input placeholder="Digite um número" name="form-n7" class="form-control w-100">
+            </label>
+
+            <p class="bi bi-percent"></p>
+
+            <label>
+                <input placeholder="Digite um número" name="form-n8" class="form-control w-100">
+            </label>
+
+            <p class="resultado">
+                {% if dividir is defined %}
+                    {{ n7 }} <i class="bi bi-percent"></i> {{ n8 }} = {{ dividir }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Dividir</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

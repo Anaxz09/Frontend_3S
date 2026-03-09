@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="carrosel d-flex overflow-hidden">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-dark" data-bs-interval="6000">
+                <img src="../static/img/bolo.jpg" height="100%" width="100%" class="d-block w-100 opacity-50">
+            </div>
+            <div class="carousel-item active bg-dark" data-bs-interval="6000">
+                <img src="../static/img/bolos.jpg" height="100%" width="100%" class="d-block w-100 opacity-50">
+            </div>
+            <div class="carousel-item active bg-dark" data-bs-interval="6000">
+                <img src="../static/img/boloss.jpg" height="100%" width="100%" class="d-block w-100 opacity-50">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="w-100 h-100 position-absolute d-flex flex-column justify-content-evenly">
+        <p class="title-senai text-white display-1 text-center">Capacitação profissional na indústria</p>
+        <p class="subtitle-senai text-white display-6 text-center">Confira os nossos cursos Profissionalizantes</p>
+    </div>
+
+</div>
+
+<div class="cursos">
+    <div class="cursos-text col-8">
+        <h1>Culinária</h1><br>
+        <p class="letra">
+            Assim como este bolo, a vida é feita de camadas: algumas são simples, mas quando adicionamos a doçura do <br>
+            chocolate e o frescor dos nossos sonhos, ela se torna extraordinária. Não espere pela ocasião perfeita; <br>
+            faça de hoje o momento ideal para saborear a sua própria jornada e celebrar cada pequena conquista com gratidão e doçura.<br>
+                                                                🍰✨
+        </p>
+    </div>
+    <div class="cursos-img bg-dark col-4">
+        <img src="/static/img/bolo4.jpg" height=100%" width="100%">
+    </div>
+</div>
+<div class="cursos">
+    <div class="cursos-img bg-dark col-8">
+        <img src="../static/img/bolo 5.jpg" height="100%" width="100%"/>
+    </div>
+    <div class="cursos-text col-4">
+        <h1>Culinária</h1><br>
+        <p class="letra">
+            A vida é como este bolo: moldada com paciência e finalizada com doçura.
+            Que a calda da gratidão transborde em seus dias e que cada momento tenha
+            o frescor e a alegria dessa combinação perfeita. Aproveite a jornada e saboreie cada detalhe. 🍓✨
+        </p>
+
+    </div>
+</div>
+{% endblock %}
