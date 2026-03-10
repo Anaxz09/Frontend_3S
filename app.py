@@ -279,6 +279,10 @@ def cadastro_funcionario():
             db_session.rollback()
     return render_template('cadastro.html')
 
+@app.route('/animais')
+def animais():
+    return  render_template('animais.html')
+
 #TODO Final do código
 
 if __name__ == '__main__':

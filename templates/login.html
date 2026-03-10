@@ -5,12 +5,13 @@
     <div class="login-box">
         <div class="perfil-icon"></div>
 
-        <form action="{{ url_for('login')}}" method="post">
-            <input type="text" name="form-email" placeholder="mail@" class="login-input">
+        <form id="form-login" class="d-flex flex-column" action="{{ url_for('login')}}" method="post">
+            <input id="input-email" type="text" name="form-email" placeholder="mail@" class="login-input">
 
-            <input type="password" name="form-senha" placeholder="senha" class="login-input">
+            <input id="input-senha" type="password" name="form-senha" placeholder="senha" class="login-input form-control">
 
             <button type="submit" class="btn-login">Log in</button>
+            <a class="btn btn-danger my-2" onclick="limpaInputslogin()">Cancelar</a>
         </form>
 
         <div style="margin-top: 15px;">
