@@ -13,5 +13,7 @@
 <img width="1888" height="966" alt="Login" src="https://github.com/user-attachments/assets/1bf9c821-d69a-490a-ad44-b9876654efc7" />
 <img width="1890" height="963" alt="Cadastro" src="https://github.com/user-attachments/assets/81535cf2-4b33-44fd-af8f-d3324fd4648e" />
 
+*Gerador de animais
+<img width="1902" height="967" alt="Gerador animais" src="https://github.com/user-attachments/assets/fcacc7da-db75-48cb-9287-9d1314b29631" />
 
 
